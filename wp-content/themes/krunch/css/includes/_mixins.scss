@@ -1,0 +1,127 @@
+
+@mixin placeholder($colour: #aaaaaa, $font-size: 13px) {
+  ::-webkit-input-placeholder {
+    color: $colour;
+    @include font_gotham($font-size);
+    //text-transform: uppercase;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: $colour;
+    @include font_gotham($font-size);
+    text-transform: uppercase;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $colour;
+    @include font_gotham($font-size);
+    text-transform: uppercase;
+  }
+
+  :-ms-input-placeholder {  
+    color: $colour; 
+    @include font_gotham($font-size);
+    text-transform: uppercase;
+  }
+}
+
+
+@mixin button($width:96%, $bgColour:#333, $colour:#fff) {
+  width: $width;
+  background: $bgColour;
+  color: $colour;
+
+  display: block;
+  clear: both;
+  padding: 6px 2%;
+  border: none;
+  text-align: center;
+  -moz-transition: background-color 0.4s ease;
+  -webkit-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  margin: 10px 0;
+
+  &:hover {
+    color: $colour;
+    text-decoration: none;
+    background: darken($bgColour, 8%);
+  }
+
+  &:visited, &:active, &:focus {
+    color: $colour;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+//Anything with a class of .button will have these styles
+.button {
+  @include button();
+}
+
+
+@mixin borderedButton($width:96%, $bgColour:#fff, $colour:#0c76bc, $bdrColour:#eee, $radius:5px) {
+  width: $width;
+  color: $colour;
+  border: 1px solid $bdrColour;
+
+   -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius; 
+
+  display: block;
+  clear: both;
+  padding: 6px 2%;
+  text-align: center;
+  -moz-transition: background-color 0.4s ease;
+  -webkit-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  margin: 10px 0;
+
+  &.kwm {
+    color: #5f5499;
+  }
+
+  &.ksw {
+    color: #6db447;
+  }
+
+  &:hover {
+    color: $colour;
+    text-decoration: none;
+    //background: darken($bgColour, 8%);
+  }
+
+  &:visited, &:active, &:focus {
+    color: $colour;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+//Anything with a class of .buttonBordered will have these styles
+.buttonBordered {
+  @include borderedButton();
+}
+
+
+@mixin border-radius($radius:5px) {
+    -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

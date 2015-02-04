@@ -1,0 +1,270 @@
+
+.bannerWrapper {
+	width: 100%;
+	height: 500px;
+	background-color: #666;
+
+	.banner {
+		position: relative;
+		overflow: auto;
+		height: auto;
+		height: 500px;
+
+	    ul {
+	    	padding: 0;
+	    	margin: 0;
+	    	li {
+	    		float: left;
+	    		list-style: none;
+	    		width: 100%;
+	    		color: #fff;
+	    		text-align: center;
+
+	    		.overlay {
+	    			position: absolute;
+	    			width: 100%;
+	    			height: 100%;
+	    			background: rgba(0, 0, 0, 0.5);
+	    		}
+
+	    		.slide {
+	    			width: 100%;
+	    			height: 500px;
+
+	    			.bannerContent {
+	    				position: absolute;
+	    				left: 5%;
+	    				top: 30%;
+	    				width: 60%;
+
+	    				h1, h2, h3, h4, h5, h6 {
+	    					font-family: $fira;
+	    					text-align: left;
+	    					text-transform: uppercase;
+	    					font-size: 60px;
+	    					line-height: normal;
+	    				}
+
+	    				p, ul, ol {
+	    					font-family: $firaLight;
+	    					text-align: left;
+	    					font-size: 24px;
+	    					line-height: normal;
+	    				}
+	    			}
+	    		}
+	    	}	
+	    }
+
+	    ol.dots {
+	    	padding: 0;
+	    	margin: 0;
+	    	position: absolute;
+			text-align: center;
+			height: auto;
+			bottom: 5px;
+			left: 0;
+			right: 0;
+			z-index: 200;
+
+	    	li.dot {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: 0 4px;
+				text-indent: -999em;
+				border: 2px solid #fff;
+				border-radius: 6px;
+				cursor: pointer;
+				opacity: .4;
+				
+				&.active {
+					background: #fff;
+					opacity: 0.8;
+				}
+
+	    	}
+	    }
+	    
+	}
+
+	&.homeBanner {
+		height: 50%;
+
+		.banner {
+			height: 50%;
+
+			.slide {
+				height: 50%;
+			}
+		}
+	}
+}
+.breadcrumbsWrapper {
+	width: 100%;
+	height: 48px;
+	background-color: #333;
+	color: #fff;
+	line-height: 48px;
+	font-family: $firaLight;
+	font-size: 15px;
+
+	a {
+		color: #fff;
+	}
+}
+
+.mapWrapper {
+	background: #303030;
+	min-height: 450px;
+
+	#map-canvas {
+		height: 450px;
+		width: 100%;
+
+		img {
+			max-width: none;
+		}
+	}
+}
+
+.sidebar {
+	ul {
+		li {
+			
+		}
+	}
+}
+
+.regions {
+	background: #303030;
+	min-height: 400px;
+	color: #fff;
+	padding: 34px 0 44px 0;
+	//background-size: cover;
+
+	h3 {
+		text-align: center;
+		font-family: $fira;
+	}
+
+	.region {
+		background: #fff;
+		min-height: 100px; 
+		height: 100%;
+		margin: 60px 0 20px 0;
+		padding: 50px 20px 20px 20px;
+		color: $mainFontColour;
+		font-size: 15px;
+
+		&.region-wm {
+			position: relative;
+			a {
+				color: $purple;
+			}
+
+			.badge {
+				background: $purple;
+				position: absolute;
+				top: -32px;
+				left: 50%;
+				text-align: center;
+				margin-left: -32px;
+				width: 65px;
+				height: 65px;
+				-webkit-border-radius: 65px;
+				-moz-border-radius: 65px;
+				-o-border-radius: 65px;
+				border-radius: 65px;
+				font-family: $firaUltraLight;
+
+				p {
+					margin: 0;
+					text-align: center;
+					line-height: 70px;
+					//float: left;
+					font-size: 25px;
+					font-weight: 100;
+					width: 50px;
+					margin-left: -2px;
+				}
+			}
+		}
+
+		&.region-sw {
+			position: relative;
+			a {
+				color: $green;
+			}
+
+			.badge {
+				background: $green;
+				position: absolute;
+				top: -32px;
+				left: 50%;
+				text-align: center;
+				margin-left: -32px;
+				width: 65px;
+				height: 65px;
+				-webkit-border-radius: 65px;
+				-moz-border-radius: 65px;
+				-o-border-radius: 65px;
+				border-radius: 65px;
+				font-family: $firaUltraLight;
+
+				p {
+					margin: 0;
+					text-align: center;
+					line-height: 70px;
+					//float: left;
+					font-size: 25px;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+}
+
+.testimonial {
+	margin: 50px 0;
+
+	h3 {
+		font-size: 72px;
+		margin: 0 0 10px 0;
+		text-transform: uppercase;
+		opacity: 0.05;
+	}
+
+	.testimonialContent {
+		font-style: italic;
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	p.testimonialName {
+		text-transform: uppercase;
+		font-family: $fira;
+		color: #000;
+		text-align: center;
+	}
+	
+}
+
+ul.twitterFeed {
+	margin: 50px 0;
+
+	li {
+		margin-bottom: 20px;
+
+		p {
+			//color: $mainFontColour;
+			margin: 0;
+
+			&.tweetTime {
+				text-align: right;
+				color: $darkGrey;
+			}
+		}
+	}
+}

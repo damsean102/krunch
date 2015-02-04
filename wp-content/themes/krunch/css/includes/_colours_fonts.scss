@@ -1,0 +1,121 @@
+//Colour VARIABLES
+$green: #6db447;
+$purple: #5f5499;
+$blue: #0c76bc;
+
+$darkGrey: #333;
+$dividerLine: #3d3d3d;
+
+$validRed: #790000;
+
+$mainFontColour: #4e4e4e;
+
+
+
+
+
+
+
+
+
+
+
+
+//Fonts
+
+@font-face {
+    font-family: 'contra';
+    src: url('../fonts/contra-webfont.eot');
+    src: url('../fonts/contra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/contra-webfont.woff') format('woff'),
+         url('../fonts/contra-webfont.ttf') format('truetype'),
+         url('../fonts/contra-webfont.svg#contraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'contraitalic';
+    src: url('../fonts/contra-italic-webfont.eot');
+    src: url('../fonts/contra-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/contra-italic-webfont.woff') format('woff'),
+         url('../fonts/contra-italic-webfont.ttf') format('truetype'),
+         url('../fonts/contra-italic-webfont.svg#contraitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'firaRegular';
+    src: url('../fonts/firasans-regular-webfont.eot');
+    src: url('../fonts/firasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-regular-webfont.woff') format('woff'),
+         url('../fonts/firasans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/firasans-regular-webfont.svg#fira_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'firaUltraLight';
+    src: url('../fonts/firasans-ultralight-webfont.eot');
+    src: url('../fonts/firasans-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-ultralight-webfont.woff') format('woff'),
+         url('../fonts/firasans-ultralight-webfont.ttf') format('truetype'),
+         url('../fonts/firasans-ultralight-webfont.svg#fira_sansultralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'firaLight';
+    src: url('../fonts/firasans-light-webfont.eot');
+    src: url('../fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-light-webfont.woff') format('woff'),
+         url('../fonts/firasans-light-webfont.ttf') format('truetype'),
+         url('../fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'firaMedium';
+    src: url('../fonts/firasans-medium-webfont.eot');
+    src: url('../fonts/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-medium-webfont.woff') format('woff'),
+         url('../fonts/firasans-medium-webfont.ttf') format('truetype'),
+         url('../fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'firaBold';
+    src: url('../fonts/firasans-bold-webfont.eot');
+    src: url('../fonts/firasans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/firasans-bold-webfont.woff') format('woff'),
+         url('../fonts/firasans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/firasans-bold-webfont.svg#fira_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+$contra: 'contra', 'Times New Roman', serif;
+$contraItalic: 'contraitalic', 'Times New Roman', serif;
+
+$fira: 'firaMedium', Helvetica, Arial, sans-serif;
+$firaUltraLight: 'firaUltraLight', Helvetica, Arial, sans-serif;
+$firaLight: 'firaLight', Helvetica, Arial, sans-serif;
+$firaReg: 'firaRegular', Helvetica, Arial, sans-serif;
+$firaBold: 'firaBold', Helvetica, Arial, sans-serif;
+
+
+
+
