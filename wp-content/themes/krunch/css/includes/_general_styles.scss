@@ -388,6 +388,26 @@ a {
 	}
 }
 
+.donateBox {
+	background: $blue;
+	margin: 20px 0;
+	padding: 2%;
+	width: 100%;
+	text-align: center;
+
+	h3 {
+		color: #fff;
+	}
+
+	a.button {
+		font-family: $fira;
+		font-size: 20px;
+		line-height: normal;
+		width: 60%;
+		margin: 20px 20%;
+	}
+}
+
 
 .child-of-kwm {
 	.content {
@@ -409,6 +429,12 @@ a {
 	.fbBox {
 		.fbTitle {
 			background: $purple;
+		}
+	}
+	.donateBox {
+		background: $purple;
+		h3 {
+			color: #fff;
 		}
 	}
 }
@@ -435,6 +461,12 @@ a {
 			background: $green;
 		}
 				
+	}
+	.donateBox {
+		background: $green;
+		h3 {
+			color: #fff;
+		}
 	}
 }
 

@@ -374,6 +374,21 @@ a {
     .fbBox .fbTitle p {
       margin-bottom: 0; }
 
+.donateBox {
+  background: #0c76bc;
+  margin: 20px 0;
+  padding: 2%;
+  width: 100%;
+  text-align: center; }
+  .donateBox h3 {
+    color: #fff; }
+  .donateBox a.button {
+    font-family: "firaMedium", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: normal;
+    width: 60%;
+    margin: 20px 20%; }
+
 .child-of-kwm .content h2, .child-of-kwm .content h3, .child-of-kwm .content h4, .child-of-kwm .content h5, .child-of-kwm .content h6 {
   color: #5f5499; }
 .child-of-kwm .sidebar .pageParent {
@@ -384,6 +399,10 @@ a {
   background: #6b5fa7; }
 .child-of-kwm .fbBox .fbTitle {
   background: #5f5499; }
+.child-of-kwm .donateBox {
+  background: #5f5499; }
+  .child-of-kwm .donateBox h3 {
+    color: #fff; }
 
 .child-of-ksw .content h2, .child-of-ksw .content h3, .child-of-ksw .content h4, .child-of-ksw .content h5, .child-of-ksw .content h6 {
   color: #6db447; }
@@ -395,6 +414,10 @@ a {
   background: #7bbd58; }
 .child-of-ksw .fbBox .fbTitle {
   background: #6db447; }
+.child-of-ksw .donateBox {
+  background: #6db447; }
+  .child-of-ksw .donateBox h3 {
+    color: #fff; }
 
 .gform_wrapper * {
   font-family: "firaRegular", Helvetica, Arial, sans-serif; }

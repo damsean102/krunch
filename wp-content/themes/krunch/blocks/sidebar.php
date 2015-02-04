@@ -66,6 +66,11 @@ $args = array(
 			</ul>
 		</div><!-- END OF sidebar DIV -->
 		
+		<div class="donateBox">
+			<h3>Help us by donating online</h3>
+			<a href="<?php echo get_field('donate_url', 'option'); ?>" class="button" target="_blank">Donate</a>
+		</div><!-- END OF donateBox DIV -->
+
 		<div class="fbBox">
 
 			<div class="fbTitle">
@@ -80,7 +85,6 @@ $args = array(
 
 			<?php endif; ?>
 		</div><!-- END OF fbBox DIV -->
-		
 
 
 	</div><!-- END OF span4 DIV -->

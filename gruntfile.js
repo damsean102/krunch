@@ -13,17 +13,12 @@ module.exports = function(grunt) {
 		sass: {
       dist: {
       options: {                       // Target options
-        noCache: true
+        noCache: true,
       },                         
         files: {                        
           'wp-content/themes/krunch/css/style.css': 'wp-content/themes/krunch/css/style.scss' 
         },
         sourcemap: true
-      }
-		},
-		clean: {
-      build: {
-        src: ["docs"]
       }
 		},
     imagemin: {                          // Task
@@ -37,12 +32,10 @@ module.exports = function(grunt) {
       }
     },
     cssmin: {
-      minify: {
-        expand: true,
-        cwd: 'wp-content/themes/krunch/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'wp-content/themes/krunch/css/',
-        ext: '.min.css'
+      target: {
+        files: {
+        'wp-content/themes/krunch/css/style.min.css': ['wp-content/themes/krunch/css/style.css']
+        }
       }
     },
     uglify: {
@@ -55,7 +48,7 @@ module.exports = function(grunt) {
 		watch: {
     	 	css: {
       			files: ['wp-content/themes/krunch/css/*.scss','wp-content/themes/krunch/css/includes/*.scss'],
-      			tasks: ['clean', 'sass', 'cssmin', 'uglify'],
+      			tasks: ['sass', 'cssmin'],
       			options: {
        				 // Start a live reload server on the default port 35729
         			livereload: 8080,
@@ -70,7 +63,7 @@ module.exports = function(grunt) {
         },
     		html: {
   				files: ['wp-content/themes/krunch/*.php','wp-content/themes/krunch/blocks/*.php'],
-          tasks: ['clean', 'sass', 'cssmin', 'uglify'],
+          tasks: ['sass', 'cssmin', 'uglify'],
   				options: {
                // Start a live reload server on the default port 35729
             livereload: 8080,
@@ -81,7 +74,6 @@ module.exports = function(grunt) {
   	});
     grunt.loadNpmTasks('grunt-contrib-livereload');
   	grunt.loadNpmTasks('grunt-contrib-watch');
-  	grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
   	grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -89,5 +81,6 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('build', ['imagemin', 'cssmin', 'uglify']);
   
 };
