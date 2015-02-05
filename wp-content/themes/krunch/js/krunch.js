@@ -40,7 +40,21 @@ $(function() {
 
     //reinitialiseGrid();
 
+    $('.responsiveMenuIcons li.respMenu a').on('click', function (e){
+		e.preventDefault();
 
+		$(".menu-main-menu-container").toggle(400);
+    });
+
+    $('#respClose').on('click', function (){
+		$(".menu-main-menu-container").toggle(400);
+    });
+
+    $('.responsiveMenuIcons li.search img').on('click', function (e){
+		e.preventDefault();
+		$(".header").css('position','relative');
+		$(".responsiveSearch").slideToggle(400);
+    });
 
     $('#newsWrapper').mixItUp({
 		layout: {

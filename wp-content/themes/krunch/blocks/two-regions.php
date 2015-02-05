@@ -5,7 +5,7 @@ $bgImgSRC = wp_get_attachment_image_src($bgImgID, 'full');
 
 ?>
 
-<div class="regions" style="background: url('<?php echo $bgImgSRC[0]; ?>') center top;">
+<div class="regions" style="background: url('<?php echo $bgImgSRC[0]; ?>') center top no-repeat;">
 	<div class="container">
 		
 		<div class="row-fluid">

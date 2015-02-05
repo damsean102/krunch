@@ -1,3 +1,7 @@
+.responsiveSearch {
+	display: none;
+}
+
 .header {
 	background: url('../img/navBG.png') top left repeat;
 	border-bottom: 1px solid $darkGrey;
@@ -9,7 +13,7 @@
 		margin: 10px 0;
 	}
 
-	.responsiveMenu {
+	.responsiveMenuIcons, #respClose {
 		display: none;
 	}
 

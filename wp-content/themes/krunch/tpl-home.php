@@ -73,7 +73,7 @@
 								<div class="span10">
 									<h3><a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
 
-									<?php echo get_the_excerpt(); ?>
+									<?php echo wpautop(get_the_excerpt()); ?>
 
 									<p><a href="<?php echo get_permalink(); ?>" class="button">Read More</a></p>
 								</div>

@@ -1,20 +1,3 @@
-<?php $navArgs = array(
-						'menu' => 'Main Menu',
-						'container' => 'div',
-						'container_class' => 'menu-main-menu-container',
-						'container_id' => '',
-						'menu_class' => 'main-menu inline',
-						'menu_id' => '',
-						'echo' => true,
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-						'depth' => 0,
-						'walker' => ''
-					); ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,27 +25,28 @@
 <div class="wrapper">
 	<div class="main">
 		
+<div class="responsiveSearch">
+	<?php get_search_form(); ?>
+</div><!-- END OF responsive DIV -->
 
 <div class="header <?php if (is_page(4)): echo 'homeHeader'; endif; ?>">
 
-	<div class="responsiveMenu">
-		<?php wp_nav_menu($navArgs); ?>
-	</div>
+	
 
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span3">
 				<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" class="logo"></a>
 
-				<div class="responsiveMenuIcon">
-					<p>&#9776;</p>
+				<div class="responsiveMenuIcons">
+					<ul class="inline">
+						<li class="search"><a href="#"><img src="<?php echo get_bloginfo('template_url'); ?>/img/search.png"></a></li>
+						<li class="respMenu"><p><a href="#">&#9776;</a></p></li>
+					</ul>
 				</div>
 			</div>
 			<div class="span9">
 				
-				
-				
-
 				<div class="socialIcons">
 
 					<div class="searchFormHeader hide">
@@ -105,8 +89,23 @@
 
 				
 				<div class="clearfix"></div>
-
-				<?php    
+ 
+					<?php $navArgs = array(
+						'menu' => 'Main Menu',
+						'container' => 'div',
+						'container_class' => 'menu-main-menu-container',
+						'container_id' => '',
+						'menu_class' => 'main-menu inline',
+						'menu_id' => '',
+						'echo' => true,
+						'before' => '',
+						'after' => '',
+						'link_before' => '',
+						'link_after' => '',
+						'items_wrap' => '<div id="respClose">X</div><ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth' => 0,
+						'walker' => ''
+					);
 				
 					wp_nav_menu( $navArgs ); ?>
 

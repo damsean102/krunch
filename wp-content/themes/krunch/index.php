@@ -96,7 +96,7 @@
 
 										<h3><?php the_title(); ?></h3>
 
-										<?php echo get_the_excerpt(); ?>
+										<?php echo wpautop(get_the_excerpt()); ?>
 
 										<a href="<?php echo get_permalink(); ?>">Read More</a>
 									</div><!-- END OF newsItem DIV -->
