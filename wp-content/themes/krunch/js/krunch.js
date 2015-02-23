@@ -52,7 +52,7 @@ $(function() {
 
     $('.responsiveMenuIcons li.search img').on('click', function (e){
 		e.preventDefault();
-		$(".header").css('position','relative');
+		//$(".header").css('position','relative');
 		$(".responsiveSearch").slideToggle(400);
     });
 

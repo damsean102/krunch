@@ -7,7 +7,7 @@
 html {height: 100%;}
 
 body {
-  background: url('../img/debut_light.png') top left repeat;
+  //background: url('../img/debut_light.png') top left repeat;
   height: 100%;
   font-family: $contra;
   font-size: 16px;
@@ -258,7 +258,7 @@ a {
 .contact {
 	.keyContacts {
 		img {
-			margin: 30px 0 0 0;	
+			margin: 30px auto 0 auto;	
 		}
 
 		&.kwm {
