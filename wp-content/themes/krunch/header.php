@@ -25,9 +25,6 @@
 <div class="wrapper">
 	<div class="main">
 		
-<div class="responsiveSearch">
-	<?php get_search_form(); ?>
-</div><!-- END OF responsive DIV -->
 
 <div class="header <?php if (is_page(4)): echo 'homeHeader'; endif; ?>">
 
@@ -40,8 +37,7 @@
 
 				<div class="responsiveMenuIcons">
 					<ul class="inline">
-						<li class="search"><a href="#"><img src="<?php echo get_bloginfo('template_url'); ?>/img/search.png"></a></li>
-						<li class="respMenu"><p><a href="#">&#9776;</a></p></li>
+						<li class="respMenu <?php if (is_page(4)): echo "respMenuHome"; endif; ?>"><p><a href="#">&#9776;</a></p></li>
 					</ul>
 				</div>
 			</div>

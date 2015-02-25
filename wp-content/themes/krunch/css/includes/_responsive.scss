@@ -108,10 +108,16 @@
 					&.respMenu {
 						
 						a {
-							color: #fff;
+							color: $darkGrey;
 							font-size: 280%;
 							line-height: normal;
 							text-decoration: none;
+						}
+					}
+
+					&.respMenuHome {
+						a {
+							color: #fff;
 						}
 					}
 

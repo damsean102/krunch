@@ -32,13 +32,7 @@ $(function() {
     	e.preventDefault();
 		$('.searchFormHeader').toggleClass('hide');
     });
-
-
-    $('.filter').on('click', function(){
-		//reinitialiseGrid();
-    });
-
-    //reinitialiseGrid();
+    
 
     $('.responsiveMenuIcons li.respMenu a').on('click', function (e){
 		e.preventDefault();
@@ -54,6 +48,11 @@ $(function() {
 		e.preventDefault();
 		//$(".header").css('position','relative');
 		$(".responsiveSearch").slideToggle(400);
+    });
+
+    $('select#mobileSubNav').on('change', function() {
+    	var val = $(this).val();
+    	window.location = val;
     });
 
     $('#newsWrapper').mixItUp({

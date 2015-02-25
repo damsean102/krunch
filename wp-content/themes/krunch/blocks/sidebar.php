@@ -19,12 +19,14 @@ if ($post->post_parent)	{
 	$parent = $post->ID;
 }
 
+$currentPage = $post->ID;
+
 $args = array(
     'child_of'     => $parent,
     'sort_order'   => 'ASC',
     'sort_column'  => 'post_title',
     'hierarchical' => 1,
-    'exclude'      => '',
+    'exclude'      => $currentPage,
     'include'      => '',
     'meta_key'     => '',
     'meta_value'   => '',
@@ -35,14 +37,34 @@ $args = array(
 
 ?>
 
-<!-- <div class="responsiveSubMenu">
+<div class="responsiveSubMenu">
 	<div class="span12">
 		<form action="<?php bloginfo('url'); ?>" method="get">
-		   <?php //wp_dropdown_pages($args); ?>
-		   <input type="submit" name="submit" value="view" />
+		   <?php $subPages = get_pages($args);
+
+			if ($subPages): ?>
+				<select id="mobileSubNav" name="subpages">
+					<option selected value="<?php echo get_permalink($currentPage); ?>"><?php echo get_the_title($currentPage); ?></option>}
+					option
+					<?php if ($parent !== $currentPage): ?>
+						<option value="<?php echo get_permalink($parent); ?>"><?php echo get_the_title($parent); ?></option>
+					<?php endif; ?>
+		
+		   		<?php foreach ($subPages as $post): setup_postdata(); ?>
+		   			<option value="<?php echo get_permalink(); ?>">- <?php echo get_the_title(); ?></option>
+				<?php endforeach;
+					wp_reset_postdata();
+				?>
+		   		</select>
+			<?php endif; ?>
+
+			<noscript>
+		   		<input type="submit" name="submit" value="Go" />
+		   	</noscript>
+
 		</form>	
 	</div>	
-</div> -->
+</div>
 
 
 
