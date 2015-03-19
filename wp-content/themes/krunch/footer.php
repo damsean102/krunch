@@ -11,6 +11,8 @@
 				<img src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" class="logo">
 				<p class="footerDetails">Krunch UK, registered charity number 1114961, is a company limited by guarantee registered in England and Wales under number 5364024 having its registered office at Sandwell Christian Centre, Langley Crescent, Oldbury, West Midlands B68 8RE.</p>
 			</div>
+			
+		<?php if (get_top_parent_id() !== 12): ?>
 			<div class="span3 offset2 tablet-span6">
 				<div class="contactDetails kwm">
 					<h3>Krunch West Midlands</h3>
@@ -19,6 +21,9 @@
 					<p><a href="mailto:<?php echo get_field('kwm_email', 'option'); ?>"><?php echo get_field('kwm_email', 'option'); ?></a></p>
 				</div>
 			</div>
+		<?php endif; ?>
+		
+		<?php if (get_top_parent_id() !== 10): ?>
 			<div class="span3 tablet-span6">
 				<div class="contactDetails ksw">
 					<h3>Krunch South West</h3>
@@ -27,6 +32,8 @@
 					<p><a href="mailto:<?php echo get_field('ksw_email', 'option'); ?>"><?php echo get_field('ksw_email', 'option'); ?></a></p>
 				</div>
 			</div>
+		<?php endif; ?>
+
 		</div><!-- END OF row DIV -->
 
 		<div class="row-fluid">

@@ -1,7 +1,15 @@
 
 <?php
+
+if (get_top_parent_id() == 10):
+	$twitterName = get_field('twitter_username_wm', 'option');
+elseif (get_top_parent_id() == 12):
+	$twitterName = get_field('twitter_username_sw', 'option');
+endif;
+
 require 'twitter/tmhOAuth.php';
 require 'twitter/tmhUtilities.php';
+
 $tmhOAuth = new tmhOAuth(array(
   'consumer_key'    => 'o7ZyvqOk3QojgA1QTB8tkWWoc',
   'consumer_secret' => 'gC9lI3xocdDS5q6GabLfhp0obYs1AGXVTxU8lUIIv4dj79neGx',
@@ -12,7 +20,7 @@ $tmhOAuth = new tmhOAuth(array(
 $code = $tmhOAuth->request('GET', $tmhOAuth->url('1.1/statuses/user_timeline'), array(
   'include_entities' => '1',
   'include_rts'      => '1',
-  'screen_name'      => 'krunchuk',
+  'screen_name'      => $twitterName,
   'count'            => 3,
 ));
 

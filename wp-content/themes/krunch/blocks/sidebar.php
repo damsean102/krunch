@@ -37,7 +37,7 @@ $args = array(
 
 ?>
 
-<div class="responsiveSubMenu">
+<!-- <div class="responsiveSubMenu">
 	<div class="span12">
 		<form action="<?php bloginfo('url'); ?>" method="get">
 		   <?php $subPages = get_pages($args);
@@ -64,7 +64,7 @@ $args = array(
 
 		</form>	
 	</div>	
-</div>
+</div> -->
 
 
 
@@ -100,10 +100,10 @@ $args = array(
 			</div>
 
 			<?php if (is_ancestor(12) || is_child_of(12) || is_page(12)): ?>
-				<div class="fb-like-box" data-href="https://www.facebook.com/krunchsouthwest" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+				<div class="fb-like-box" data-href="<?php echo get_field('facebook_url_sw', 'option'); ?>" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
 			<?php else: ?>
 				
-				<div class="fb-like-box" data-href="https://www.facebook.com/pages/KRUNCH/281629189229?fref=ts" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+				<div class="fb-like-box" data-href="<?php echo get_field('facebook_url_wm', 'option'); ?>" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
 
 			<?php endif; ?>
 		</div><!-- END OF fbBox DIV -->

@@ -50,37 +50,42 @@
 					</div><!-- END OF searchFormHeader DIV -->
 
 				<?php
-					$facebookUrl = get_field('facebook_url', 'option');
-					$twitterUrl = get_field('twitter_url', 'option');
+
+					if (get_top_parent_id() == 10):
+						$facebookUrl = get_field('facebook_url_wm', 'option');
+						$twitterUrl = get_field('twitter_url_wm', 'option');
+					elseif (get_top_parent_id() == 12):
+						$facebookUrl = get_field('facebook_url_sw', 'option');
+						$twitterUrl = get_field('twitter_url_sw', 'option');
+					endif;
+
 				?>	
 					
 					<?php if (is_page(4)): ?>
 						<ul class="inline">
 							<li class="search"><a href="#" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/search-white.png"></a></li>
-
-							<?php if ($facebookUrl): ?>
-								<li class="fb"><a href="<?php echo $facebookUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/fb-white.png"></a></li>
-							<?php endif; ?>
-
-							<?php if ($twitterUrl): ?>
-								<li class="tw"><a href="<?php echo $twitterUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/tw-white.png"></a></li>
-							<?php endif; ?>
 						</ul>
 					<?php else: ?>
 
 						<ul class="inline">
 							<li class="search"><a href="#" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/search.png"></a></li>
 
-							<?php if ($facebookUrl): ?>
-								<li class="fb"><a href="<?php echo $facebookUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/fb.png"></a></li>
+							<?php if (get_top_parent_id() == 10 || get_top_parent_id() == 12): ?>
+
+								<?php if ($facebookUrl): ?>
+									<li class="fb"><a href="<?php echo $facebookUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/fb.png"></a></li>
+								<?php endif; ?>
+
+								<?php if ($twitterUrl): ?>
+									<li class="tw"><a href="<?php echo $twitterUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/tw.png"></a></li>
+								<?php endif; ?>
+
 							<?php endif; ?>
 
-							<?php if ($twitterUrl): ?>
-								<li class="tw"><a href="<?php echo $twitterUrl; ?>" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/tw.png"></a></li>
-							<?php endif; ?>
 						</ul>
 
 					<?php endif; ?>
+
 				</div><!-- END OF socialIcons DIV -->
 
 				

@@ -392,6 +392,25 @@ function is_ancestor($post_id) {
     }
 }
 
+function get_top_parent_id() {
+
+	global $post;
+
+	//Find the Top Most Parent
+	if ($post->post_parent):
+
+		//Get Top Most Parent
+		$ancestors = get_post_ancestors($post->ID);
+		$root=count($ancestors)-1;
+		$parent = $ancestors[$root];
+		return $parent;
+
+	else:
+		return $post->ID;
+	endif;
+
+}
+
 add_filter( 'body_class', 'add_body_classes' );
 function add_body_classes($classes) {
 	
