@@ -35,9 +35,11 @@ if ($banners): ?>
 				<?php endforeach; wp_reset_postdata(); ?>
 
 			</ul>
-		</div><!-- END OF banner DIV -->	
+		</div><!-- END OF banner DIV -->
+		<div class="moreArrow"><a href="#more"><img src="<?php echo get_bloginfo('template_url'); ?>/img/more-arrow.png" alt=""></a></div>
 	</div>
 <?php else: ?>
 	<!-- Display fallback Image -->
 <?php endif; ?>
+<div id="more"></div>
    

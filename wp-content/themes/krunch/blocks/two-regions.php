@@ -18,10 +18,7 @@ $bgImgSRC = wp_get_attachment_image_src($bgImgID, 'full');
 
 			<div class="span6">
 				<div class="region region-wm">
-					<div class="badge">
-						<p>KWM</p>
-					</div><!-- END OF badge DIV -->
-					
+
 					<div class="regionContent">
 						<?php echo get_field('region_kwm_text'); ?>
 					</div>
@@ -30,10 +27,7 @@ $bgImgSRC = wp_get_attachment_image_src($bgImgID, 'full');
 			</div><!-- END OF span6 DIV -->
 			<div class="span6">
 				<div class="region region-sw">
-					<div class="badge">
-						<p>KSW</p>
-					</div><!-- END OF badge DIV -->
-
+					
 					<div class="regionContent">
 						<?php echo get_field('region_ksw_text'); ?>
 					</div>

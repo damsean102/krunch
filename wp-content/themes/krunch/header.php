@@ -33,7 +33,14 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span3">
+				
+			<?php	if (get_top_parent_id() == 10): ?>
+				<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/krunch-sandwell.png" class="logo"></a>
+			<?php elseif (get_top_parent_id() == 12): ?>
+				<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/krunch-south-west.png" class="logo"></a>
+			<?php else: ?>
 				<a href="<?php echo get_bloginfo('url'); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" class="logo"></a>
+			<?php endif; ?>
 
 				<div class="responsiveMenuIcons">
 					<ul class="inline">

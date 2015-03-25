@@ -18,7 +18,7 @@ function krunch_scripts() {
 	wp_register_script( 'unslider', get_bloginfo( 'template_url' ).'/js/unslider.min.js', '', '', true);
 	wp_register_script( 'unslider-fade', get_bloginfo( 'template_url' ).'/js/unslider.fade.min.js', '', '', true);
 	wp_register_script( 'swipe', get_bloginfo( 'template_url' ).'/js/jquery.event.swipe.min.js', '', '', true);
-	wp_register_script( 'mixitup', get_bloginfo( 'template_url' ).'/js/jquery.mixitup.js', '', '', true);
+	//wp_register_script( 'mixitup', get_bloginfo( 'template_url' ).'/js/jquery.mixitup.js', '', '', true);
 	wp_register_script( 'krunch-js', get_bloginfo( 'template_url' ).'/js/krunch.js', '', '', true);
 
 	
@@ -28,7 +28,7 @@ function krunch_scripts() {
 	wp_enqueue_script('unslider');
 	//wp_enqueue_script('unslider-fade');
 	wp_enqueue_script('swipe');
-	wp_enqueue_script('mixitup');
+	//wp_enqueue_script('mixitup');
 
 	/* Load the Krunch Script --Keep this Last */
 	wp_enqueue_script('krunch-js');
@@ -171,12 +171,13 @@ function region_custom_taxonomy() {
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'region', array( 'testimonial' ), $args );
+	register_taxonomy( 'region', array( 'post', 'testimonial' ), $args );
 
 }
 
 // Hook into the 'init' action
 add_action( 'init', 'region_custom_taxonomy', 0 );
+
 
 
 //Add first and last classes

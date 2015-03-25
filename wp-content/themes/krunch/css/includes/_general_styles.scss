@@ -7,7 +7,6 @@
 html {height: 100%;}
 
 body {
-  //background: url('../img/debut_light.png') top left repeat;
   height: 100%;
   font-family: $contra;
   font-size: 16px;
@@ -218,9 +217,9 @@ a {
 }
 
 #newsWrapper {
-	margin-top: 50px;
+
 	.mix {
-		display: none;
+		//display: none;
 		float: left;
 		width: 31%;
 		margin: 25px 0 25px 2%;
@@ -256,6 +255,19 @@ a {
 }
 
 .contact {
+	
+	h1, h2, h3, h4, h5, h6 {
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	#gform_wrapper_2 {
+		margin: 50px 0;
+	}
+
 	.keyContacts {
 		img {
 			margin: 30px auto 0 auto;	

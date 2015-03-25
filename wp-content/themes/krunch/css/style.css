@@ -247,52 +247,55 @@ a {
       .filters .filter.active:hover {
         cursor: default; }
 
-#newsWrapper {
-  margin-top: 50px; }
-  #newsWrapper .mix {
-    display: none;
-    float: left;
-    width: 31%;
-    margin: 25px 0 25px 2%; }
-    #newsWrapper .mix.clear {
-      clear: left; }
-    #newsWrapper .mix.mix-2 {
-      width: 32%; }
-    #newsWrapper .mix .newsItem img {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-height: 190px; }
-      #newsWrapper .mix .newsItem img.placeholderIMG {
-        margin: 40px auto; }
-    #newsWrapper .mix .newsItem a {
-      width: 40%;
-      background: #333333;
+#newsWrapper .mix {
+  float: left;
+  width: 31%;
+  margin: 25px 0 25px 2%; }
+  #newsWrapper .mix.clear {
+    clear: left; }
+  #newsWrapper .mix.mix-2 {
+    width: 32%; }
+  #newsWrapper .mix .newsItem img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-height: 190px; }
+    #newsWrapper .mix .newsItem img.placeholderIMG {
+      margin: 40px auto; }
+  #newsWrapper .mix .newsItem a {
+    width: 40%;
+    background: #333333;
+    color: white;
+    display: block;
+    clear: both;
+    padding: 6px 2%;
+    border: none;
+    text-align: center;
+    -moz-transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+    margin: 10px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px; }
+    #newsWrapper .mix .newsItem a:hover {
       color: white;
-      display: block;
-      clear: both;
-      padding: 6px 2%;
-      border: none;
-      text-align: center;
-      -moz-transition: background-color 0.4s ease;
-      -webkit-transition: background-color 0.4s ease;
-      -o-transition: background-color 0.4s ease;
-      transition: background-color 0.4s ease;
-      margin: 10px 0;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-      border-radius: 5px;
-      margin-top: 20px; }
-      #newsWrapper .mix .newsItem a:hover {
-        color: white;
-        text-decoration: none;
-        background: #1f1f1f; }
-      #newsWrapper .mix .newsItem a:visited, #newsWrapper .mix .newsItem a:active, #newsWrapper .mix .newsItem a:focus {
-        color: white;
-        text-decoration: none;
-        outline: none; }
+      text-decoration: none;
+      background: #1f1f1f; }
+    #newsWrapper .mix .newsItem a:visited, #newsWrapper .mix .newsItem a:active, #newsWrapper .mix .newsItem a:focus {
+      color: white;
+      text-decoration: none;
+      outline: none; }
 
+.contact h1, .contact h2, .contact h3, .contact h4, .contact h5, .contact h6 {
+  text-align: center; }
+.contact p {
+  text-align: center; }
+.contact #gform_wrapper_2 {
+  margin: 50px 0; }
 .contact .keyContacts img {
   margin: 30px auto 0 auto; }
 .contact .keyContacts.kwm a {
@@ -624,7 +627,23 @@ a {
 .bannerWrapper {
   width: 100%;
   height: 500px;
-  background-color: #666; }
+  background-color: #666;
+  position: relative; }
+  .bannerWrapper .moreArrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -45px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s; }
+    .bannerWrapper .moreArrow img {
+      width: 90px;
+      height: 90px; }
+    .bannerWrapper .moreArrow:hover {
+      opacity: 0.9;
+      filter: alpha(opacity=90); }
   .bannerWrapper .banner {
     position: relative;
     overflow: auto;
@@ -664,6 +683,7 @@ a {
               font-size: 24px;
               line-height: normal; }
     .bannerWrapper .banner ol.dots {
+      display: none;
       padding: 0;
       margin: 0;
       position: absolute;
@@ -674,7 +694,7 @@ a {
       right: 0;
       z-index: 200; }
       .bannerWrapper .banner ol.dots li.dot {
-        display: inline-block;
+        display: none;
         width: 10px;
         height: 10px;
         margin: 0 4px;
@@ -726,59 +746,17 @@ a {
     min-height: 100px;
     height: 100%;
     margin: 60px 0 20px 0;
-    padding: 50px 20px 20px 20px;
+    padding: 20px;
     color: #4e4e4e;
     font-size: 15px; }
     .regions .region.region-wm {
       position: relative; }
       .regions .region.region-wm a {
         color: #5f5499; }
-      .regions .region.region-wm .badge {
-        background: #5f5499;
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        text-align: center;
-        margin-left: -32px;
-        width: 65px;
-        height: 65px;
-        -webkit-border-radius: 65px;
-        -moz-border-radius: 65px;
-        -o-border-radius: 65px;
-        border-radius: 65px;
-        font-family: "firaUltraLight", Helvetica, Arial, sans-serif; }
-        .regions .region.region-wm .badge p {
-          margin: 0;
-          text-align: center;
-          line-height: 70px;
-          font-size: 25px;
-          font-weight: 100;
-          width: 50px;
-          margin-left: -2px; }
     .regions .region.region-sw {
       position: relative; }
       .regions .region.region-sw a {
         color: #6db447; }
-      .regions .region.region-sw .badge {
-        background: #6db447;
-        position: absolute;
-        top: -32px;
-        left: 50%;
-        text-align: center;
-        margin-left: -32px;
-        width: 65px;
-        height: 65px;
-        -webkit-border-radius: 65px;
-        -moz-border-radius: 65px;
-        -o-border-radius: 65px;
-        border-radius: 65px;
-        font-family: "firaUltraLight", Helvetica, Arial, sans-serif; }
-        .regions .region.region-sw .badge p {
-          margin: 0;
-          text-align: center;
-          line-height: 70px;
-          font-size: 25px;
-          font-weight: 100; }
 
 .testimonial {
   margin: 50px 0; }
@@ -797,6 +775,12 @@ a {
     font-family: "firaMedium", Helvetica, Arial, sans-serif;
     color: #000;
     text-align: center; }
+
+.partner {
+  margin: 0 0 40px 0; }
+  .partner img {
+    display: block;
+    margin: 0 auto; }
 
 .twitterWrapper {
   margin: 50px 0 25px 0; }

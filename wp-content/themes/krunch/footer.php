@@ -15,7 +15,7 @@
 		<?php if (get_top_parent_id() !== 12): ?>
 			<div class="span3 offset2 tablet-span6">
 				<div class="contactDetails kwm">
-					<h3>Krunch West Midlands</h3>
+					<h3>Krunch Sandwell</h3>
 					<?php echo get_field('kwm_address', 'option'); ?>
 					<p><?php echo get_field('kwm_phone', 'option'); ?></p>
 					<p><a href="mailto:<?php echo get_field('kwm_email', 'option'); ?>"><?php echo get_field('kwm_email', 'option'); ?></a></p>
@@ -24,7 +24,7 @@
 		<?php endif; ?>
 		
 		<?php if (get_top_parent_id() !== 10): ?>
-			<div class="span3 tablet-span6">
+			<div class="span3 <?php if (get_top_parent_id() == 12): echo "offset2"; endif; ?> tablet-span6">
 				<div class="contactDetails ksw">
 					<h3>Krunch South West</h3>
 					<?php echo get_field('ksw_address', 'option'); ?>
