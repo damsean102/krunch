@@ -294,6 +294,10 @@ a {
   text-align: center; }
 .contact p {
   text-align: center; }
+.contact.regional-contact h1, .contact.regional-contact h2, .contact.regional-contact h3, .contact.regional-contact h4, .contact.regional-contact h5, .contact.regional-contact h6 {
+  text-align: left; }
+.contact.regional-contact p {
+  text-align: left; }
 .contact #gform_wrapper_2 {
   margin: 50px 0; }
 .contact .keyContacts img {

@@ -1,5 +1,5 @@
 <?php
-//Template Name: Region News Template
+//Template Name: Regional News Template
 get_header(); ?>
 
 <?php get_template_part('blocks/banners'); ?>
