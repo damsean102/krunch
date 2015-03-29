@@ -11,6 +11,10 @@
 // 	});
 // }
 
+function goBack() {
+    window.history.back();
+}
+
 $(function() {
 
     $('.banner').unslider({
@@ -73,6 +77,21 @@ $(function() {
 			scrollTop: $("#more").offset().top
 		}, 600);
 	});
+
+
+	function equalHeight(group) {
+    tallest = 0;
+    group.each(function() {
+        thisHeight = $(this).height();
+        if(thisHeight > tallest) {
+            tallest = thisHeight;
+        }
+    });
+    group.height(tallest);
+	}
+	
+ 	equalHeight($(".region"));
+
 
 	var isMobile = {
 		Android: function() {
@@ -167,4 +186,45 @@ $(function() {
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+		function initializeKSWStreetView() {
+		  var krunchSWLocation = new google.maps.LatLng('51.606679','-2.523323');
+		  var panoramaOptions = {
+		    position: krunchSWLocation,
+		    pov: {
+		      heading: 179.45,
+		      pitch: 0
+		    },
+		    zoom: 1
+		  };
+		  var myPano = new google.maps.StreetViewPanorama(
+			document.getElementById('ksw-map-canvas'),
+		      panoramaOptions);
+		  myPano.setVisible(true);
+		}
+
+	google.maps.event.addDomListener(window, 'load', initializeKSWStreetView);
+
+
+
+	function initializeKWMStreetView() {
+		  var krunchWMLocation = new google.maps.LatLng('52.487425','-2.006763');
+		  var panoramaOptions = {
+		    position: krunchWMLocation,
+		    pov: {
+		      heading: 290.84,
+		      pitch: 0
+		    },
+		    zoom: 1
+		  };
+		  var myPano1 = new google.maps.StreetViewPanorama(
+			document.getElementById('kwm-map-canvas'),
+		      panoramaOptions);
+		  myPano1.setVisible(true);
+		}
+
+	google.maps.event.addDomListener(window, 'load', initializeKWMStreetView);
+
 });

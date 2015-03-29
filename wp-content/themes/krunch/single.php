@@ -14,15 +14,10 @@
 				
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-						<?php if (has_post_thumbnail($post_id)):
-
-							echo get_the_post_thumbnail($post_id, 'full');
-							
-						endif; ?>
 
 						<?php the_content(); ?>
 
-						<a href="<?php echo get_permalink(21); ?>" class="button">Back to News</a>
+						<a href="" onclick="goBack()" class="button">Back</a>
 
 					<?php endwhile; else: ?>
 						<p><?php _e('Sorry, no content has been found'); ?></p>

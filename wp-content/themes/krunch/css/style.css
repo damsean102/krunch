@@ -731,10 +731,10 @@ a {
 .mapWrapper {
   background: #303030;
   min-height: 450px; }
-  .mapWrapper #map-canvas {
+  .mapWrapper #map-canvas, .mapWrapper #kwm-map-canvas, .mapWrapper #ksw-map-canvas {
     height: 450px;
     width: 100%; }
-    .mapWrapper #map-canvas img {
+    .mapWrapper #map-canvas img, .mapWrapper #kwm-map-canvas img, .mapWrapper #ksw-map-canvas img {
       max-width: none; }
 
 .regions {

@@ -464,6 +464,9 @@ function add_my_editor_style() {
 function googleMapShortcode($atts, $content = null) 
 {
     extract(shortcode_atts(array("type" => 'road', "latitude" => '53.130056', "longitude" => '-1.216414', "zoom" => '10', "message" => '', "height" => '300'), $atts));
+
+
+    //51.606679,-2.523323
      
     $mapType = '';
     if($type == "satellite") 
@@ -530,6 +533,71 @@ function googleMapShortcode($atts, $content = null)
 }
 
 add_shortcode('map', 'googleMapShortcode');
+
+
+
+function mapStreetView() {
+
+	extract(shortcode_atts(array("region" => 'ksw', "height" => '300'), $atts));
+
+	//51.606679,-2.523323
+
+	if ($region == 'ksw'):
+		$latitude = '51.606679';
+		$longitude = '-2.523323';
+	else:
+		$latitude = '51.606679';
+		$longitude = '-2.523323';
+	endif;
+
+
+
+	echo "<script>
+		function initialize() {
+		  var krunchLocation = new google.maps.LatLng(" . $latitude . ", " . $longitude . ");
+		  var panoramaOptions = {
+		    position: krunchLocation,
+		    pov: {
+		      heading: 179.45h,
+		      pitch: 89.88t
+		    },
+		    zoom: 1
+		  };
+		  var myPano = new google.maps.StreetViewPanorama(
+			document.getElementById('map'),
+		      panoramaOptions);
+		  myPano.setVisible(true);
+		}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>";
+
+	return '<div id="map" style="width:100%; height:'.$height.'px;" class="googleMap"></div>';
+
+}
+
+add_shortcode('map-street-view', 'mapStreetView');
+
+
+
+function get_sub_services() {
+
+	global $post; 
+
+	if (is_page()):
+		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+	endif;
+
+	if ($childpages) {
+		$string = '<ul>' . $childpages . '</ul>';
+	}
+
+	return $string;
+
+}
+
+add_shortcode('list_services', 'get_sub_services');
 
 
 // function cure_wp_amnesia_on_query_string($query_string){
