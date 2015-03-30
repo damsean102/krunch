@@ -181,10 +181,19 @@
 		color: $mainFontColour;
 		font-size: 15px;
 
+		a {
+			@include borderedButton(60%, #fff, #0c76bc, #4e4e4e, 5px);
+			margin: 0 20%;
+		}
+
 		&.region-wm {
 			position: relative;
 			a {
 				color: $purple;
+
+				&:hover {
+					border-color: $purple;
+				}
 			}
 		}
 
@@ -192,6 +201,10 @@
 			position: relative;
 			a {
 				color: $green;
+
+				&:hover {
+					border-color: $green;
+				}
 			}
 		}
 	}

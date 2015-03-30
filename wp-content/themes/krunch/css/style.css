@@ -753,14 +753,48 @@ a {
     padding: 20px;
     color: #4e4e4e;
     font-size: 15px; }
+    .regions .region a {
+      width: 60%;
+      color: #0c76bc;
+      border: 1px solid #4e4e4e;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      display: block;
+      clear: both;
+      padding: 6px 2%;
+      text-align: center;
+      -moz-transition: background-color 0.4s ease;
+      -webkit-transition: background-color 0.4s ease;
+      -o-transition: background-color 0.4s ease;
+      transition: background-color 0.4s ease;
+      margin: 10px 0;
+      margin: 0 20%; }
+      .regions .region a.kwm {
+        color: #5f5499; }
+      .regions .region a.ksw {
+        color: #6db447; }
+      .regions .region a:hover {
+        color: #0c76bc;
+        text-decoration: none; }
+      .regions .region a:visited, .regions .region a:active, .regions .region a:focus {
+        color: #0c76bc;
+        text-decoration: none;
+        outline: none; }
     .regions .region.region-wm {
       position: relative; }
       .regions .region.region-wm a {
         color: #5f5499; }
+        .regions .region.region-wm a:hover {
+          border-color: #5f5499; }
     .regions .region.region-sw {
       position: relative; }
       .regions .region.region-sw a {
         color: #6db447; }
+        .regions .region.region-sw a:hover {
+          border-color: #6db447; }
 
 .testimonial {
   margin: 50px 0; }

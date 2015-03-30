@@ -21,6 +21,7 @@ $bgImgSRC = wp_get_attachment_image_src($bgImgID, 'full');
 
 					<div class="regionContent">
 						<?php echo get_field('region_kwm_text'); ?>
+						<p><a href="<?php echo get_permalink(10); ?>" class="buttonBordered">Find out more</a></p>
 					</div>
 
 				</div><!-- END OF region DIV -->
@@ -30,6 +31,7 @@ $bgImgSRC = wp_get_attachment_image_src($bgImgID, 'full');
 					
 					<div class="regionContent">
 						<?php echo get_field('region_ksw_text'); ?>
+						<p><a href="<?php echo get_permalink(12); ?>" class="buttonBordered">Find out more</a></p>
 					</div>
 
 				</div><!-- END OF region DIV -->	

@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> onload="initialize();">
+<body <?php body_class(); ?> onload="initialize()">
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

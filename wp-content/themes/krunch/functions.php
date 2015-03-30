@@ -536,50 +536,6 @@ add_shortcode('map', 'googleMapShortcode');
 
 
 
-function mapStreetView() {
-
-	extract(shortcode_atts(array("region" => 'ksw', "height" => '300'), $atts));
-
-	//51.606679,-2.523323
-
-	if ($region == 'ksw'):
-		$latitude = '51.606679';
-		$longitude = '-2.523323';
-	else:
-		$latitude = '51.606679';
-		$longitude = '-2.523323';
-	endif;
-
-
-
-	echo "<script>
-		function initialize() {
-		  var krunchLocation = new google.maps.LatLng(" . $latitude . ", " . $longitude . ");
-		  var panoramaOptions = {
-		    position: krunchLocation,
-		    pov: {
-		      heading: 179.45h,
-		      pitch: 89.88t
-		    },
-		    zoom: 1
-		  };
-		  var myPano = new google.maps.StreetViewPanorama(
-			document.getElementById('map'),
-		      panoramaOptions);
-		  myPano.setVisible(true);
-		}
-
-	google.maps.event.addDomListener(window, 'load', initialize);
-
-	</script>";
-
-	return '<div id="map" style="width:100%; height:'.$height.'px;" class="googleMap"></div>';
-
-}
-
-add_shortcode('map-street-view', 'mapStreetView');
-
-
 
 function get_sub_services() {
 
