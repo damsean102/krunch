@@ -5,7 +5,23 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+	.header {
+		.menu-main-menu-container {
+			ul {
+				li {
+					a {
+						font-size: 95%;
+					}
+				} 
+			}
+		}
+	}
+}
 
+@media (max-width: 979px) {
+	.fbBox {
+		display: none;
+	}
 }
  
 /* Landscape phone to portrait tablet */
@@ -19,6 +35,10 @@
 	.wrapper, .container {
 		width: 100%;
 		padding: 0;
+	}
+
+	.breadcrumbsWrapper {
+		padding: 0 2.5%;
 	}
 
 	.responsiveSearch {
@@ -181,6 +201,8 @@
 
 		img {
 			margin: 0 0 20px 0;
+			float: none;
+			display: block;
 		}
 
 		.newsPost {
@@ -227,17 +249,50 @@
 			
 		}
 	}
+	
+	.desktopSidebar {
+		display: none;
+	}
+
+	.responsiveSidebar {
+		display: block;
+	}
 
 	.responsiveSubMenu {
-		display: block;
+		width: 100%;
+		background: $blue;
+		padding: 5% 2.5%;
+		margin: 0 0 40px 0;
+
+		form {
+			width: 100%;
+			margin: 0;
+
+			select {
+				width: 100%;
+				margin: 0;
+			}
+		}
 	}
 
 	.fbBox {
 		display: none;
 	}
 
+	.partner {
+		img {
+			display: block;
+			margin: 10px auto;
+		}
+	}
+
 	.mapWrapper {
 		min-height:350px;
+		
+		iframe {
+			height: 350px !important;
+		}
+
 		#map-canvas {
 			height:350px;
 		}
@@ -293,6 +348,18 @@
 	.breadcrumbsWrapper {
 		display: none;
 	}
+
+	.twitterWrapper {
+		ul.twitterFeed {
+			li {
+				width: 100%;
+				float: none;
+				display: block;
+				margin-right: 0;
+			}
+		}
+	}
+
 }
 
 @media (max-width: 480px) {

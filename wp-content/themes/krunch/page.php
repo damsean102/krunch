@@ -8,8 +8,16 @@
 	<div class="container">
 		<div class="row-fluid">
 			
+
+
+			<div class="desktopSidebar">
+				<?php include 'blocks/sidebar.php'; ?>	
+			</div>
 			
-			<?php include 'blocks/sidebar.php'; ?>
+			<div class="responsiveSidebar">
+				<?php include 'blocks/sidebar-responsive.php'; ?>	
+			</div>
+			
 			
 			<div class="<?php if ($children): echo 'span8'; else: echo 'span10 offset1'; endif; ?>">
 

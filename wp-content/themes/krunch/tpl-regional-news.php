@@ -23,7 +23,13 @@ get_header(); ?>
 		<div class="row-fluid">
 			
 			
-			<?php get_template_part('blocks/sidebar'); ?>
+			<div class="desktopSidebar">
+				<?php include 'blocks/sidebar.php'; ?>	
+			</div>
+			
+			<div class="responsiveSidebar">
+				<?php include 'blocks/sidebar-responsive.php'; ?>	
+			</div>
 			
 
 			<div class="span8">

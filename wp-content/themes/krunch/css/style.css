@@ -179,9 +179,6 @@ a {
       -o-border-radius: 5px;
       border-radius: 5px; }
 
-.responsiveSubMenu {
-  display: none; }
-
 .sidebar ul.subnav {
   background: #333333;
   margin: 0; }
@@ -409,6 +406,8 @@ a {
   background: #5f5499; }
   .child-of-kwm .donateBox h3 {
     color: #fff; }
+.child-of-kwm .responsiveSubMenu {
+  background: #5f5499; }
 
 .child-of-ksw .content h2, .child-of-ksw .content h3, .child-of-ksw .content h4, .child-of-ksw .content h5, .child-of-ksw .content h6 {
   color: #6db447; }
@@ -424,6 +423,8 @@ a {
   background: #6db447; }
   .child-of-ksw .donateBox h3 {
     color: #fff; }
+.child-of-ksw .responsiveSubMenu {
+  background: #6db447; }
 
 .gform_wrapper * {
   font-family: "firaRegular", Helvetica, Arial, sans-serif; }
@@ -737,6 +738,9 @@ a {
     .mapWrapper #map-canvas img, .mapWrapper #kwm-map-canvas img, .mapWrapper #ksw-map-canvas img {
       max-width: none; }
 
+.responsiveSidebar {
+  display: none; }
+
 .regions {
   background: #303030 !important;
   min-height: 400px;
@@ -833,6 +837,12 @@ ul.twitterFeed li {
 
 /* Large desktop */
 /* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .header .menu-main-menu-container ul li a {
+    font-size: 95%; } }
+@media (max-width: 979px) {
+  .fbBox {
+    display: none; } }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   body {
@@ -842,6 +852,9 @@ ul.twitterFeed li {
   .wrapper, .container {
     width: 100%;
     padding: 0; }
+
+  .breadcrumbsWrapper {
+    padding: 0 2.5%; }
 
   .responsiveSearch {
     position: relative;
@@ -944,7 +957,9 @@ ul.twitterFeed li {
     padding: 2.5%; }
 
   .content img {
-    margin: 0 0 20px 0; }
+    margin: 0 0 20px 0;
+    float: none;
+    display: block; }
   .content .newsPost img {
     display: block;
     margin: 10px auto; }
@@ -973,14 +988,35 @@ ul.twitterFeed li {
       width: 60%;
       margin: 20px 20% 10px; }
 
-  .responsiveSubMenu {
+  .desktopSidebar {
+    display: none; }
+
+  .responsiveSidebar {
     display: block; }
+
+  .responsiveSubMenu {
+    width: 100%;
+    background: #0c76bc;
+    padding: 5% 2.5%;
+    margin: 0 0 40px 0; }
+    .responsiveSubMenu form {
+      width: 100%;
+      margin: 0; }
+      .responsiveSubMenu form select {
+        width: 100%;
+        margin: 0; }
 
   .fbBox {
     display: none; }
 
+  .partner img {
+    display: block;
+    margin: 10px auto; }
+
   .mapWrapper {
     min-height: 350px; }
+    .mapWrapper iframe {
+      height: 350px !important; }
     .mapWrapper #map-canvas {
       height: 350px; }
 
@@ -1009,7 +1045,13 @@ ul.twitterFeed li {
 /* Landscape phones and down */
 @media (max-width: 640px) {
   .breadcrumbsWrapper {
-    display: none; } }
+    display: none; }
+
+  .twitterWrapper ul.twitterFeed li {
+    width: 100%;
+    float: none;
+    display: block;
+    margin-right: 0; } }
 @media (max-width: 480px) {
   .testimonial h3 {
     font-size: 50px; } }

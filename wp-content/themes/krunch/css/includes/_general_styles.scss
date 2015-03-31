@@ -105,10 +105,6 @@ a {
 	}
 }
 
-.responsiveSubMenu {
-	display: none;
-}
-
 .sidebar {
 	ul.subnav {
 		background: $darkGrey;
@@ -459,6 +455,10 @@ a {
 			color: #fff;
 		}
 	}
+
+	.responsiveSubMenu {
+		background: $purple;
+	}
 }
 
 .child-of-ksw {
@@ -489,6 +489,10 @@ a {
 		h3 {
 			color: #fff;
 		}
+	}
+
+	.responsiveSubMenu {
+		background: $green;
 	}
 }
 
