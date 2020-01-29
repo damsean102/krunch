@@ -1,66 +1,43 @@
 
-<div class="wrap sucuriscan-wrap">
-
-    <h2 id="warnings_hook"></h2>
-
-    <div class="sucuriscan-header sucuriscan-clearfix">
-        <a href="http://sucuri.net/signup" target="_blank" title="Sucuri Security" class="sucuriscan-logo">
-            <img src="%%SUCURI.SucuriURL%%/inc/images/logo.png" alt="Sucuri Security" />
-        </a>
-        <h2>Sucuri Security %%SUCURI.PageTitle%%</h2>
-    </div>
-
-    <h2 class="nav-tab-wrapper sucuriscan-navbar">
-        %%SUCURI.Navbar%%
+<div class="wrap sucuriscan-container">
+    <h2 id="warnings_hook">
+        <!-- Dynamically populated via JavaScript -->
     </h2>
 
-    <div class="sucuriscan-maincontent sucuriscan-clearfix">
+    %%%SUCURI.GenerateAPIKey.Modal%%%
 
-        <div class="sucuriscan-leftside sucuriscan-%%SUCURI.PageStyleClass%%">
-
-            %%SUCURI.PageContent%%
-
+    <div class="sucuriscan-header sucuriscan-clearfix">
+        <div class="sucuriscan-pull-left">
+            <a href="https://sucuri.net/signup" target="_blank" title="{{Sucuri Security}}" class="sucuriscan-logo">
+                <img src="%%SUCURI.PluginURL%%/inc/images/pluginlogo.png" alt="Sucuri Inc." />
+            </a>
+            <span class="sucuriscan-subtitle">{{WP Plugin}}</span>
+            <span class="sucuriscan-version">v%%SUCURI.PluginVersion%%</span>
         </div>
 
-        <div class="sucuriscan-sidebar">
+        <div class="sucuriscan-pull-right sucuriscan-navbar">
+            <ul>
+                <li><a href="https://wordpress.org/support/plugin/sucuri-scanner/reviews/" target="_blank" rel="noopener" class="button button-secondary">{{Review}}</a></li>
 
-            <div class="sucuriscan-ad">
-                <h2>Is your website infected with malware? Blacklisted by Google?</h2>
-                <p>Don't know where to start? Get cleared today by <a href="http://sucuri.net/signup" target="_blank">Sucuri Security</a>!</p>
-                <p><a href="http://sucuri.net/tour" target="_blank" class="button-primary">Read more</a></p>
-            </div>
+                <li class="sucuriscan-%%SUCURI.GenerateAPIKey.Visibility%%">
+                    <a href="#" class="button button-primary sucuriscan-modal-button sucuriscan-register-site-button"
+                    data-modalid="sucuriscan-register-site">{{Generate API Key}}</a>
+                </li>
 
-            <div class="sucuriscan-ad">
-                <h2>Preventive website security in the cloud!</h2>
-                <ul class="sucuriscan-list">
-                    <li>Web Application Firewall (WAF) Protection</li>
-                    <li>Virtual Website Patching</li>
-                    <li>Cloud Intrusion Prevention System (IPS)</li>
-                    <li>High Security Website Monitoring</li>
-                    <li>Malicious Traffic Filtering</li>
-                </ul>
-                <p>
-                    <a href="http://cloudproxy.sucuri.net/signup" target="_blank" class="button button-primary">Sign up now</a>
-                    <a href="http://cloudproxy.sucuri.net/" target="_blank" class="button button-primary">Read more</a>
-                </p>
-            </div>
+                <li><a href="%%SUCURI.URL.Dashboard%%" class="button button-primary">{{Dashboard}}</a></li>
 
-            <iframe src="https://www.youtube-nocookie.com/embed/EVa9FY3nKuQ" height="250" class="sucuriscan-scanner-video" allowfullscreen></iframe>
+                <li><a href="%%SUCURI.URL.Firewall%%" class="button button-primary">{{Firewall (WAF)}}</a></li>
 
+                <li><a href="%%SUCURI.URL.Settings%%" class="button button-primary">{{Settings}}</a></li>
+            </ul>
         </div>
-
     </div>
 
-    <div class="sucuriscan-footer sucuriscan-clearfix">
-        <a href="http://sucuri.net/signup" target="_blank" title="Sucuri Security" class="sucuriscan-logo">
-            <img src="%%SUCURI.SucuriURL%%/inc/images/logo.png" alt="Sucuri Security" />
-        </a>
-        <div class="sucuriscan-help">
-            <p>
-                If you have any questions about these checks or this plugin, contact us at
-                <a href="mailto:info@sucuri.net">info@sucuri.net</a> or visit
-                <a href="http://sucuri.net/" target="_blank">sucuri.net</a>
-            </p>
-        </div>
+    <div class="sucuriscan-clearfix sucuriscan-content sucuriscan-%%SUCURI.PageStyleClass%%">
+        %%%SUCURI.PageContent%%%
+    </div>
+
+    <div class="sucuriscan-clearfix sucuriscan-footer">
+        <div>{{Copyright}} &copy; %%SUCURI.Year%% {{Sucuri Inc. All Rights Reserved.}}</div>
     </div>
 </div>

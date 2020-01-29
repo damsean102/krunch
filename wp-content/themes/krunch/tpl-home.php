@@ -19,14 +19,12 @@
 					<?php endif; ?>
 				</div><!-- END OF span8 DIV -->
 			</div><!-- END OF row-fluid DIV -->
-		</div><!-- END OF container DIV -->	
+		</div><!-- END OF container DIV -->
 	</div><!-- END OF content DIV -->
 <?php endif; ?>
 
-
 <?php get_template_part('blocks/two-regions'); ?>
-
-
+<?php get_template_part('blocks/video'); ?>
 
 <div class="content">
 	<?php get_template_part('blocks/random-testimonial'); ?>

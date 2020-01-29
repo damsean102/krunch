@@ -19,21 +19,21 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=1551679685049385&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-	
+
 
 
 <div class="wrapper">
 	<div class="main">
-		
+
 
 <div class="header <?php if (is_page(4)): echo 'homeHeader'; endif; ?>">
 
-	
+
 
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span3">
-				
+
 			<?php	if (get_top_parent_id() == 10): ?>
 				<a href="<?php echo get_permalink(10); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/krunch-sandwell.png" class="logo"></a>
 			<?php elseif (get_top_parent_id() == 12): ?>
@@ -49,11 +49,11 @@
 				</div>
 			</div>
 			<div class="span9">
-				
+
 				<div class="socialIcons">
 
 					<div class="searchFormHeader hide">
-						<?php get_search_form(); ?>	
+						<?php get_search_form(); ?>
 					</div><!-- END OF searchFormHeader DIV -->
 
 				<?php
@@ -66,8 +66,8 @@
 						$twitterUrl = get_field('twitter_url_sw', 'option');
 					endif;
 
-				?>	
-					
+				?>
+
 					<?php if (is_page(4)): ?>
 						<ul class="inline">
 							<li class="search"><a href="#" target="_blank"><img src="<?php echo get_bloginfo('template_url'); ?>/img/search-white.png"></a></li>
@@ -95,9 +95,9 @@
 
 				</div><!-- END OF socialIcons DIV -->
 
-				
+
 				<div class="clearfix"></div>
- 
+
 					<?php $navArgs = array(
 						'menu' => 'Main Menu',
 						'container' => 'div',
@@ -114,7 +114,7 @@
 						'depth' => 0,
 						'walker' => ''
 					);
-				
+
 					wp_nav_menu( $navArgs ); ?>
 
 					<div class="clearfix"></div>

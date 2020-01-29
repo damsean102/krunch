@@ -31,16 +31,16 @@ $args = array(
 
 					<option selected >Select a page</option>
 					<option value="<?php echo get_permalink($topParent); ?>"><?php echo get_the_title($topParent); ?></option>
-					
-		
-					<?php 
-					foreach ($subPages as $post): setup_postdata();
+
+
+					<?php
+					foreach ($subPages as $post): setup_postdata($post);
 						$ancestorCount = get_post_ancestors($post);
 					?>
 
 						<option value="<?php echo get_permalink(); ?>"><?php if (count($ancestorCount) >= 2): echo "-- "; else: echo "- "; endif; ?><?php echo get_the_title(); ?></option>
 
-				<?php 
+				<?php
 					endforeach;
 					wp_reset_postdata();
 				?>
@@ -51,6 +51,6 @@ $args = array(
 				<input type="submit" name="submit" value="Go" />
 			 </noscript>
 
-		</form>	
-	</div>	
+		</form>
+	</div>
 </div>
